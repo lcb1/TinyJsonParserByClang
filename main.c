@@ -193,20 +193,20 @@ val* parse_val(char* json,int start,int end){
     }
 }
 
-json_obj* parse_json(char* json,int start,int end){
+json_obj* parse_json(char* json,int start,int end){//解析 json object
     json_obj* pre_head=new_json_obj(json);
     json_obj* p=pre_head;
 
 
     start=skip_space(json,start,end);
     printf("parse_json.start: %d\n\r",start);
-    if(json[start]!='{') return NULL;
+    if(json[start]!='{') return NULL; //不以 '{' 开头 解析错误
     start++;
     while(start<end){
-        key* k=parse_key(json,start,end);
+        key* k=parse_key(json,start,end);//解析 key
         printf("parse_json.k  ");print_key(k);
-        if(k==NULL) return NULL;
-        start=k->end+1;
+        if(k==NULL) return NULL; //key 解析错误
+        start=k->end+1;           //start 指针前移
         start=skip_gap(json,start,end);
         printf("parse_json.start: %d\n\r",start);
 

@@ -1,7 +1,7 @@
 # TinyJsonParserByClang
 ### 简介  
-> 一个极简的C语言json解析器
-
+> 一个极简的C语言json解析器  
+> 一次扫描解析 只记录key与value在原串的区间 还有value的type
 
 json_obj
 ```
