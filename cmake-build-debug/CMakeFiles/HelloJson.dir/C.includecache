@@ -7,10 +7,10 @@
 #IncludeRegexTransform: 
 
 /Users/admin/CLionProjects/HelloJson/main.c
-stdio.h
--
 stdlib.h
 -
-memory.h
+stdio.h
+-
+string.h
 -
 

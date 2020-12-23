@@ -3,7 +3,7 @@
 > 一个极简的C语言json解析器  
 > 一次扫描解析 只记录key与value在原串的区间 还有value的type
 
-json_obj
+* json_obj
 ```
 typedef struct json_obj{
     struct json_obj* pre; //上一个json_obj
@@ -13,7 +13,7 @@ typedef struct json_obj{
     val* item_val;      //val 在原串的区间
 }json_obj;
 ```
-key
+* key
 ```
 typedef struct key{
     int start;
@@ -21,7 +21,7 @@ typedef struct key{
 }key;
 ```
 
-val
+* val
 ```
 typedef struct{
     int start;
